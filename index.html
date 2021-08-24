@@ -3,34 +3,41 @@
 <head>
 </head>
 <body>
-    <h1>Guess the Number</h1>
+  <style>
+    body{
+      font-family:Courier New, Courier, 'monospace';
+      background-color:rgb(131, 255, 152);
+      text-align: center;
+    }
+  </style>
+  <h1> Guess the number Assignment </h1>
+  <p>A JavaScript assignment made by Mahder Wehabe</p>
 	<script>
         let num = Math.floor(Math.random() * 101);
-        let guess = prompt("guess a number between 1 and 100");
+
+        let guess = prompt("Guess a number between 1 and 100");
+        //(what is true do this; when we start writing a loop starting off with false is the better way)==>
         let gotIt = false;
-        let numGuesses = 1;
+        let numGuesses = 0;
 
         while(gotIt === false){
-            numGuesses++;
+            numGuesses++; 
             if(num == guess)
             {
-                //alert("Got it!");
-                gotIt = true;//break out of loop
-            }else{//continue since answer is incorrect!!!!!
-
-                if (num > guess){//higher
-                    guess = prompt("higher")
-
-                }else{//lower
-                    guess = prompt("lower")
-
-                }
-
-                //guess = prompt("guess again!");
+              //alert("Got it!"guess = prompt("guess a number between 1 and 10"););
+              gotIt = true; //break out of loop
+            }else{// continue, since answer is incorrect!
+              if(num > guess){//higher!
+                guess = prompt("Higher");
+              }else{//lower!
+                guess = prompt("Lower");
+              }
+                //guess = prompt("guess again!");  
             }
-
+        
         }
-        alert("Got It!!! You guessed the correct number, which was "  + num +  " and it took you "  + numGuesses + " times.");
+
+        alert("Congratulations you've got the number!" + " Which was  " +num + " And you have guessed " + numGuesses + " times!")
         //alert("Sorry!  You guessed " + guess + " and the number was " + num);
 
 	</script>
